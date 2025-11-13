@@ -1,13 +1,1 @@
-name: C++ Tests
 
-on: [push, pull_request]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Build and run tests
-        run: |
-          g++ -std=c++17 tests/test_inventory.cpp -o test
-          ./test
